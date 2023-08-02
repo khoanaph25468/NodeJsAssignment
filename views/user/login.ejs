@@ -1,0 +1,58 @@
+<%- include('../inc/top') %> <%= msg %>
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem">
+          <div class="card-body p-5 text-center">
+            <h3 class="mb-5">Sign in</h3>
+              
+            <form method="post">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="form-outline mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example1" class="form-control" name="username"/>
+                    <label class="form-label" for="form3Example1"
+                      >Username</label
+                    >
+                  </div>
+                </div>
+              </div>
+  
+             
+  
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="form3Example4" class="form-control" name="passwd" />
+                <label class="form-label" for="form3Example4">Password</label>
+              </div>
+             
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input
+                  class="form-check-input me-2"
+                  type="checkbox"
+                  value=""
+                  id="form2Example33"
+                  checked
+                />
+                <label class="form-check-label" for="form2Example33">
+                  Subscribe to our newsletter
+                </label>
+              </div>
+  
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Sign in
+              </button>
+  
+            
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('../inc/bottom') %>

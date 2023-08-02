@@ -1,0 +1,49 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+#content{
+  background-color: rgb(234, 224, 224);
+  width: 100%;
+}
+.wrapper{
+  display: flex;
+}
+
+#sidebar{
+  min-width: 250px;
+  max-width: 250px;
+  background-color: rgb(109, 173, 236);
+  color: #fff;
+
+}
+#sidebar ul li a{
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  color: #fff;
+}
+#sidebar ul li a:hover{
+  background-color: #fff ;
+  color:rgb(109, 173, 236);
+}
+
+a, a:hover, afocus{
+  color: inherit;
+  text-decoration: none;
+}
+#search{
+  margin-left: 15px;
+}
+#setting{
+  margin-right: 250px;
+
+}
+#user{
+  margin-left: 250px;
+  
+}

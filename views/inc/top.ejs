@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.min.css"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/stylesheets/style.css" />
+    <style>
+      #content {
+        background-color: white;
+        width: 100%;
+      }
+
+      .wrapper {
+        display: flex;
+      }
+
+      #sidebar {
+        min-width: 150px;
+        max-width: 150px;
+        background-color: rgb(109, 173, 236);
+        color: #fff;
+      }
+
+      #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+        color: #fff;
+      }
+
+      #sidebar ul li a:hover a::selection {
+        background-color: #fff;
+        color: rgb(109, 173, 236);
+      }
+
+      a,
+      a:hover,
+      afocus {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      #search {
+        margin-left: 15px;
+      }
+
+      #setting {
+        margin-right: 250px;
+      }
+
+      #user {
+        margin-left: 250px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header"></div>
+        <ul class="list-unstyled">
+          <li><a href="/">Sản Phẩm</a></li>
+          <!-- <li><a href="/sp">Sản Phẩm</a></li> -->
+          <li><a href="/loai">Loại</a></li>
+          <li><a href="/user">Người Dùng</a></li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Tài khoản
+            </a>
+            <ul class="dropdown-menu">
+              <li><a style="color: black" href="/user/login">Đăng Nhập </a></li>
+              <li><a style="color: black" href="/user/reg">Đăng Ký</a></li>
+             
+            </ul>
+          </li>
+      
+        </ul>
+      </nav>
+      <!-- Content -->
+      <div id="content">
+        <header class="row header">
+          <nav class="row navbar bg-body-tertiary" id="search">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </nav>
+        
+</html>

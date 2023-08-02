@@ -1,0 +1,24 @@
+<%- include('../inc/top') %>
+
+<div class="row" style="margin: 10px">
+  <h2>Danh sách USER</h2>
+
+  <table class="table table-hover">
+    <tr>
+      <th>ID</th>
+      <th>Userame</th>
+      <th>Email</th>
+    </tr>
+
+    <% user.forEach( ( row ) => { %>
+    <tr>
+      <td><%= row._id %></td>
+      <td><%= row.username %></td>
+      <td><%= row.email %></td>
+      <td><a role="button"href="user/delete/<%= row._id %>" button type="button" class="btn btn-danger">Xóa</button></td>
+    </tr>
+    <% }); %>
+  </table>
+</div>
+
+<%- include('../inc/bottom') %>

@@ -1,0 +1,31 @@
+<%- include('../inc/top') %>
+
+<div class="row">
+  <h2>Sua Thể Loại</h2>
+
+  <%= msg %>
+
+  <div>
+    <form action="" method="post">
+      <% listTheloai.forEach( (objTL)=>{%>
+
+        <div class="form-group">
+          <label for="input-example">Sửa thể loại:</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="input-example"
+            value="<%= objTL.name %>"
+            placeholder="Nhập vào đây"
+          />
+
+     
+
+      <button type="submit">Save</button>
+      <% } ) %>
+    </form>
+  </div>
+</div>
+
+<%- include('../inc/bottom') %>

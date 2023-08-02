@@ -1,0 +1,56 @@
+<%- include('../inc/top') %>
+<div class="row">
+  <h2>Thêm sản phẩm V2</h2>
+
+  <%= msg %>
+  <div style="margin-left: 50px;">
+    <form action="" method="post">
+      <select name="theloai" >
+        <% listTheloai.forEach( (objTL)=>{ 
+            let selected = '';// xác định thể loại đã chọn của sp
+            if(String( objTL._id ) == String(objSP.id_theloai) ){
+                selected = '  selected ';
+            }
+            %>
+            
+            <option  <%= selected %> 
+                value="<%= objTL._id %>"> <%= objTL.name %>  </option>
+
+        <%   } ) %>
+      <div class="form-group">
+        <label for="input-example">Nhập Tên Sản Phẩm:</label>
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          value="<%= objSP.name %>"
+          id="input-example"
+          placeholder="Nhập vào đây"
+        />
+      <div class="form-group">
+        <label for="input-example">Nhập Giá:</label>
+        <input
+          type="text"
+          name="price"
+          class="form-control"
+          value="<%= objSP.price %>"
+          id="input-example"
+          placeholder="Nhập vào đây"
+        />
+      </div>
+      <div class="form-group mb-4">
+        <label for="details">Customer Details</label>
+        <textarea
+          class="form-control"
+          name="description"
+          cols="30"
+          value="<%= objSP.description %>"
+          rows="12"
+          placeholder="Customer Details"
+        ></textarea>
+      </div>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+<%- include('../inc/bottom') %>

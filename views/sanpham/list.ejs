@@ -1,0 +1,73 @@
+<%- include('../inc/top') %>
+<div class="row" style="margin: 10px">
+  <h2>Danh sách xe</h2>
+
+  <table class="table table-hover">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Desc</th>
+      <th>Thẻ loại</th>
+    </tr>
+
+    <% listSp.forEach((row) => { %>
+    <tr>
+
+      <td>
+        <a href="/sp/edit/<%= row._id %>"> <%= row._id %> </a>
+      </td>
+      <td><%= row.name %></td>
+      <td><%= row.price %></td>
+      <td><%= row.description %></td>
+      <td><%= row.id_theloai ? row.id_theloai.name : 'N/A' %></td>
+
+      <!-- Kiểm tra xem id_theloai có tồn tại trước khi truy cập vào thuộc tính 'name' -->
+      
+      <td>
+        <a
+          role="button"
+          href="sp/edit/<%= row._id %>"
+          button
+          type="button"
+          class="btn btn-info"
+          >Sửa</a
+        >
+      </td>
+      <td>
+        <a
+          role="button"
+          href="sp/delete/<%= row._id %>"
+          button
+          type="button"
+          class="btn btn-danger"
+          >Xóa</a
+        >
+      </td>
+      <td>
+        <a
+          role="button"
+          href="sp/show/<%= row._id %>"
+          button
+          type="button"
+          class="btn btn-success"
+          >Chi tiết</a
+        >
+      </td>
+    </tr>
+    <% }); %>
+
+    <div class="form-group mb-4">
+      <a
+        role="button"
+        href="/sp/add-sp"
+        button
+        type="submit"
+        class="btn btn-primary"
+        >Thêm xe</a
+      >
+    </div>
+  </table>
+</div>
+
+<%- include('../inc/bottom') %>

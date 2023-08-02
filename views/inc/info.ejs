@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.min.css"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/stylesheets/style.css" />
+    <style>
+      #content {
+        background-color: white;
+        width: 100%;
+      }
+
+      .wrapper {
+        display: flex;
+      }
+
+      #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background-color: rgb(109, 173, 236);
+        color: #fff;
+      }
+
+      #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+        color: #fff;
+      }
+
+      #sidebar ul li a:hover a::selection {
+        background-color: #fff;
+        color: rgb(109, 173, 236);
+      }
+
+      a,
+      a:hover,
+      afocus {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      #search {
+        margin-left: 15px;
+      }
+
+      #setting {
+        margin-right: 250px;
+      }
+
+      #user {
+        margin-left: 250px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header"></div>
+        <ul class="list-unstyled">
+          <li><a href="/">Màn hình chính</a></li>
+          <!-- <li><a href="/sp">Sản Phẩm</a></li> -->
+          <li><a href="/loai">Loại</a></li>
+          <li><a href="/user">User</a></li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Tài khoản
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a style="color: black" class="dropdown-item" href="/user/info"
+                  >Thông tin</a
+                >
+              </li>
+              <li>
+                <a
+                  style="color: black"
+                  class="dropdown-item"
+                  href="/user/changepass"
+                  >Đổi mật khẩu</a
+                >
+              </li>
+
+              <li>
+                <a style="color: black" class="dropdown-item" href="#"
+                  >Đăng xuất</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="/user">Cài đặt</a></li>
+        </ul>
+      </nav>
+      <!-- Content -->
+      <div id="content">
+        <header class="row header">
+          <!-- <nav class="row navbar bg-body-tertiary" id="search">
+          <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+            <svg id="user" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+              class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg>
+
+            <svg id="setting" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+              class="bi bi-gear-fill" viewBox="0 0 16 16">
+              <path
+                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+            </svg>
+
+          </div>
+
+        </nav> -->
+        </header>
+        <h1>Thông tin tài khoản</h1>
+        <div class="col-md-8 offset-md-2">
+          <span class="anchor" id="formUserEdit"></span>
+
+          <!-- form user info -->
+          <div
+            class="card card-outline-secondary"
+            style="margin-top: 50px; margin-bottom: 102px"
+          >
+            <div class="card-header">
+              <h3 class="mb-0">User Information</h3>
+            </div>
+            <div class="card-body">
+              <form class="form" role="form" autocomplete="off">
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >First name</label
+                  >
+                  <div class="col-lg-9">
+                    <input class="form-control" type="text" value="Jane" />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Last name</label
+                  >
+                  <div class="col-lg-9">
+                    <input class="form-control" type="text" value="Bishop" />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Email</label
+                  >
+                  <div class="col-lg-9">
+                    <input
+                      class="form-control"
+                      type="email"
+                      value="email@gmail.com"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Company</label
+                  >
+                  <div class="col-lg-9">
+                    <input class="form-control" type="text" value="" />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Website</label
+                  >
+                  <div class="col-lg-9">
+                    <input class="form-control" type="url" value="" />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Time Zone</label
+                  >
+                  <div class="col-lg-9">
+                    <select id="user_time_zone" class="form-control" size="0">
+                      <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                      <option value="Alaska">(GMT-09:00) Alaska</option>
+                      <option value="Pacific Time (US &amp; Canada)">
+                        (GMT-08:00) Pacific Time (US &amp; Canada)
+                      </option>
+                      <option value="Arizona">(GMT-07:00) Arizona</option>
+                      <option value="Mountain Time (US &amp; Canada)">
+                        (GMT-07:00) Mountain Time (US &amp; Canada)
+                      </option>
+                      <option
+                        value="Central Time (US &amp; Canada)"
+                        selected="selected"
+                      >
+                        (GMT-06:00) Central Time (US &amp; Canada)
+                      </option>
+                      <option value="Eastern Time (US &amp; Canada)">
+                        (GMT-05:00) Eastern Time (US &amp; Canada)
+                      </option>
+                      <option value="Indiana (East)">
+                        (GMT-05:00) Indiana (East)
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Username</label
+                  >
+                  <div class="col-lg-9">
+                    <input class="form-control" type="text" value="janeuser" />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Password</label
+                  >
+                  <div class="col-lg-9">
+                    <input
+                      class="form-control"
+                      type="password"
+                      value="11111122333"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label form-control-label"
+                    >Confirm</label
+                  >
+                  <div class="col-lg-9">
+                    <input
+                      class="form-control"
+                      type="password"
+                      value="11111122333"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label
+                    class="col-lg-3 col-form-label form-control-label"
+                  ></label>
+                  <div class="col-lg-9">
+                    <input
+                      type="reset"
+                      class="btn btn-secondary"
+                      value="Cancel"
+                    />
+                    <input
+                      type="button"
+                      class="btn btn-primary"
+                      value="Save Changes"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- <div id="list">
+
+        <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Add loại
+        </button>
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Loại</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Tên loại</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                 <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">User Name</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Group</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                              </div>
+                              <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Status</label>
+                              </div> -->
+          <!-- </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+          <!-- 
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tên Loại</th>
+             <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Group</th>
+                        <th scope="col">Status</th> 
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Iphone</td>
+            <td>Otto</td>
+                        <td>mark@mdo.com</td>
+                        <td>User</td>
+                        <td>Ẩn</td> 
+            <td><button type="button" class="btn btn-info">Xóa</button></td>
+            <td><button type="button" class="btn btn-danger">Sửa</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Samsung</td>
+            <td>Melody</td>
+                        <td>melody@mdo.com</td>
+                        <td>Admin</td>
+                        <td>Hiện</td> 
+            <td><button type="button" class="btn btn-info">Sửa</button></td>
+            <td><button type="button" class="btn btn-danger">Xóa</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Oppo</td>
+             <td>Melody</td>
+                        <td>mom@mdo.com</td>
+                        <td>User</td>
+                        <td>Hiện</td> 
+            <td><button type="button" class="btn btn-info">Sửa</button></td>
+            <td><button type="button" class="btn btn-danger">Xóa</button></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Vivo</td>
+             <td>Tokuda</td>
+                        <td>melody@mdo.com</td>
+                        <td>User</td>
+                        <td>Hiện</td> 
+            <td><button type="button" class="btn btn-info">Sửa</button></td>
+            <td><button type="button" class="btn btn-danger">Xóa</button></td>
+          </tr>
+
+        </tbody>
+      </table> -->
+        </div>
+      </div>
+    </div>
+    <!-- <script src="/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
